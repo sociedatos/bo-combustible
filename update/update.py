@@ -132,7 +132,7 @@ def update_store(sal2_df, now):
         stored_df, sal2_df.reset_index()
     ])
 
-    stored_df.to_csv(fn)
+    stored_df.to_csv(fn, index=False)
 
 
 ###############################################################################
