@@ -20,6 +20,7 @@ HEADERS = {
     'Connection': 'close',
 }
 TIMEOUT = 5
+RETRY = 3
 
 
 ###############################################################################
@@ -32,7 +33,15 @@ def update_station_list():
         for cod_dept in range(1, 9 + 1):
             base_url = STATION_LIST_URL.format(cod_dept, cod_prod)
 
-            req = requests.get(base_url, headers=HEADERS, timeout=30)
+            req = None
+            for _ in range(RETRY):
+                try:
+                    req = requests.get(base_url, headers=HEADERS, timeout=30)
+                    req.raise_for_status()
+                    break
+                except:
+                    continue
+
             req_stationss = req.json()['oResultado']
 
             req_stationss = pd.DataFrame(req_stationss)
@@ -140,8 +149,16 @@ def update_store(sal2_df, now):
 ###############################################################################
 
 if __name__ == '__main__':
+    print('[!] start')
+
     stations_df = update_station_list()
     saldos = []
+
+    print(
+        '[*] updated station list: {} ({})'.format(
+            len(stations_df), stations_df['id_eess_saldo'].nunique()
+        )
+    )
 
     for cod_prod, stations_prod in stations_df.groupby('product_code'):
         results = asyncio.run(
@@ -150,6 +167,8 @@ if __name__ == '__main__':
         saldos.extend(results)
 
     sal2_df = pd.DataFrame([__ for _ in saldos if _ for __ in _])
+
+    print('[*] updated sal2: {} ({})'.format(len(sal2_df), sal2_df['id_eess'].nunique()))
 
     now = pd.to_datetime('now', utc=True)
     now = now.tz_convert("Etc/GMT+4").tz_localize(None).floor('s')
@@ -162,3 +181,5 @@ if __name__ == '__main__':
 
     update_store(sal2_df, now)
     update_stations_store(stations_df)
+
+    print('[!] finish')
