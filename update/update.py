@@ -1,4 +1,5 @@
 import os
+import time
 
 import numpy as np
 import pandas as pd
@@ -40,14 +41,20 @@ def update_station_list():
                     req.raise_for_status()
                     break
                 except:
+                    time.sleep(5 ** _)
                     continue
 
-            req_stationss = req.json()['oResultado']
+            try:
+                req_stationss = req.json()['oResultado']
 
-            req_stationss = pd.DataFrame(req_stationss)
-            req_stationss['product_code'] = cod_prod
+                req_stationss = pd.DataFrame(req_stationss)
+                req_stationss['product_code'] = cod_prod
 
-            stations.append(req_stationss)
+                stations.append(req_stationss)
+
+            except:
+                print('server down?!')
+                exit(1)
 
     stations_df = pd.concat(stations).reset_index(drop=True)
     stations_df = stations_df[
