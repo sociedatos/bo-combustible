@@ -185,6 +185,9 @@ if __name__ == '__main__':
     sal2_df = sal2_df.set_index(['fecha_actualizacion', 'id_eess', 'id_producto_bsa'])[[
         'fecha_ultima_venta', 'saldo_octano', 'saldo_bsa', 'saldo_planta'
     ]].sort_index()
+    sal2_df['fecha_ultima_venta'] = pd.to_datetime(
+        sal2_df['fecha_ultima_venta'].fillna('').str.rsplit('.', n=1).str[0]
+    )
 
     update_store(sal2_df, now)
     update_stations_store(stations_df)
