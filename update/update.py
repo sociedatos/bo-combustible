@@ -158,7 +158,15 @@ def update_store(sal2_df, now):
 if __name__ == '__main__':
     print('[!] start')
 
-    stations_df = update_station_list()
+    stations_df = pd.read_csv('./stations.csv')
+    stations_df = pd.concat([
+        stations_df.assign(product_code=0),
+        stations_df.assign(product_code=1),
+        stations_df.assign(product_code=2),
+        stations_df.assign(product_code=3),
+    ], ignore_index=True)
+
+    # stations_df = update_station_list()
     saldos = []
 
     print(
