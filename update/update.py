@@ -183,7 +183,7 @@ if __name__ == '__main__':
     sal2_df['fecha_actualizacion'] = now
 
     sal2_df = sal2_df.set_index(['fecha_actualizacion', 'id_eess', 'id_producto_bsa'])[[
-        'saldo_octano', 'saldo_bsa', 'saldo_planta'
+        'fecha_ultima_venta', 'saldo_octano', 'saldo_bsa', 'saldo_planta'
     ]].sort_index()
 
     update_store(sal2_df, now)
