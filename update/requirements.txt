@@ -1,5 +1,2 @@
 requests
-numpy
 pandas
-aiohttp
-async_timeout

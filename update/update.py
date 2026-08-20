@@ -1,203 +1,171 @@
-import os
 import time
+from pathlib import Path
 
-import numpy as np
 import pandas as pd
-
 import requests
 
-import asyncio
-import async_timeout
 
-import aiohttp
-
-
-BASE_URL = 'https://vsr11vpr08m22gb.anh.gob.bo:9443/WSMobile/v1'
-STATION_LIST_URL = BASE_URL + '/EstacionesXprod/F761D63AC28406573E20A24CB1DB2EC6/{}/{}'
-STATION_URL = BASE_URL + '/EstacionesSaldo/F761D63AC28406573E20A24CB1DB2EC6/{}/{}'
-
+BASE_URL = (
+    'https://vsr11vpr08m22gb.anh.gob.bo:9443/WSMobile/v2/'
+    'estaciones/9ADE86E5A083423EBE50C051F4DB9778'
+)
+PRODUCTS = {
+    0: 'Gasolina',
+    1: 'Diesel',
+    2: 'Gasolina Premium',
+    3: 'Diesel ULS',
+}
+DEPARTMENT_IDS = range(1, 10)
 HEADERS = {
     'user-agent': 'Dart/3.4 (dart:io)',
     'Connection': 'close',
 }
-TIMEOUT = 5
+TIMEOUT = 30
 RETRY = 3
 
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT_DIR / 'data_discrete'
 
-###############################################################################
-# update
-###############################################################################
+OUTPUT_COLUMNS = [
+    'fecha_actualizacion',
+    'id_eess',
+    'fecha_actualizacion_sistema',
+    'id_producto_abs',
+    'fecha_ultima_venta',
+    'despacho_en_curso',
+    'fecha_hora_despacho',
+    'saldo_estado',
+    'con_venta',
+]
+DATE_COLUMNS = [
+    'fecha_actualizacion',
+    'fecha_actualizacion_sistema',
+    'fecha_ultima_venta',
+    'fecha_hora_despacho',
+]
 
-def update_station_list():
-    stations = []
-    for cod_prod in range(3 + 1):
-        for cod_dept in range(1, 9 + 1):
-            base_url = STATION_LIST_URL.format(cod_dept, cod_prod)
 
-            req = None
-            for _ in range(RETRY):
-                try:
-                    req = requests.get(base_url, headers=HEADERS, timeout=30)
-                    req.raise_for_status()
-                    break
-                except:
-                    time.sleep(5 ** _)
+def fetch_stations(session, department_id, product_id):
+    params = {
+        'departamento': department_id,
+        'producto': product_id,
+    }
+
+    for attempt in range(RETRY):
+        try:
+            response = session.get(BASE_URL, params=params, timeout=TIMEOUT)
+            response.raise_for_status()
+            payload = response.json()
+
+            if payload.get('strMensaje') != 'OK':
+                return []
+
+            rows = payload.get('oResultado')
+            if not isinstance(rows, list):
+                raise ValueError('oResultado is not a list')
+
+            return rows
+        except (requests.RequestException, ValueError) as error:
+            if attempt == RETRY - 1:
+                raise RuntimeError(
+                    'Could not download department {} product {}'.format(
+                        department_id, product_id
+                    )
+                ) from error
+            time.sleep(5 ** attempt)
+
+
+def download_snapshot(now=None):
+    frames = []
+
+    with requests.Session() as session:
+        session.headers.update(HEADERS)
+
+        for department_id in DEPARTMENT_IDS:
+            for product_id in PRODUCTS:
+                rows = fetch_stations(session, department_id, product_id)
+                if not rows:
                     continue
 
-            try:
-                req_stationss = req.json()['oResultado']
+                frame = pd.DataFrame(rows)
+                frame['producto_id'] = product_id
+                frames.append(frame)
 
-                req_stationss = pd.DataFrame(req_stationss)
-                req_stationss['product_code'] = cod_prod
+    if not frames:
+        raise RuntimeError('The API returned no station data')
 
-                stations.append(req_stationss)
+    snapshot = pd.concat(frames, ignore_index=True)
+    snapshot = snapshot.rename(columns={
+        'updated_at': 'fecha_actualizacion_sistema',
+        'id': 'id_eess',
+        'producto_id': 'id_producto_abs',
+    })
 
-            except:
-                print('server down?!')
-                exit(1)
+    missing_columns = set(OUTPUT_COLUMNS[1:]) - set(snapshot.columns)
+    if missing_columns:
+        raise ValueError(
+            'The API response is missing columns: {}'.format(
+                ', '.join(sorted(missing_columns))
+            )
+        )
 
-    stations_df = pd.concat(stations).reset_index(drop=True)
-    stations_df = stations_df[
-        ~stations_df[['id_eess_saldo', 'product_code']].duplicated(keep='first')
-    ]
+    now = (
+        pd.Timestamp.now(tz='America/La_Paz')
+        if now is None
+        else pd.Timestamp(now)
+    )
+    if now.tzinfo is not None:
+        now = now.tz_convert('America/La_Paz').tz_localize(None)
+    now = now.floor('s')
 
-    stations_df[[
-        'id_eess_saldo',
-        'id_entidad',
-        'id_departamento',
-        'product_code'
-    ]] = stations_df[[
-        'id_eess_saldo',
-        'id_entidad',
-        'id_departamento',
-        'product_code'
-    ]].astype(int)
+    snapshot['fecha_actualizacion'] = now
+    snapshot = snapshot[OUTPUT_COLUMNS].copy()
 
-    return stations_df
+    for column in DATE_COLUMNS:
+        date_values = (
+            snapshot[column]
+            .astype('string')
+            .str.split('.', regex=False)
+            .str[0]
+            .str.replace(' ', 'T', n=1)
+        )
+        snapshot[column] = pd.to_datetime(
+            date_values,
+            format='%Y-%m-%dT%H:%M:%S',
+            errors='coerce',
+        )
 
-
-async def fetch_station(semaphore, session, cod_prod, station_id):
-    base_url = STATION_URL.format(station_id, cod_prod)
-
-    async with semaphore:
-        try:
-            async with async_timeout.timeout(TIMEOUT):
-                async with session.get(base_url, headers=HEADERS) as req:
-                    req.raise_for_status()
-                    req_data = await req.json()
-
-                    if req_data['strMensaje'] == 'OK':
-                        return req_data['oResultado']
-
-        except:
-            await asyncio.sleep(.05)
-
-    return
-
-
-async def update_stations(cod_prod, station_ids, max_concurrency=1):
-    semaphore = asyncio.Semaphore(max_concurrency)
-
-    async with aiohttp.ClientSession() as session:
-        tasks = [
-            fetch_station(semaphore, session, cod_prod, _) for _ in station_ids
-        ]
-        res = []
-
-        for task in asyncio.as_completed(tasks):
-            station_res = await task
-            res.append(station_res)
-
-        return res
+    return snapshot
 
 
-###############################################################################
-# store
-###############################################################################
+def update_store(snapshot, now, data_dir=DATA_DIR):
+    data_dir.mkdir(parents=True, exist_ok=True)
+    filename = data_dir / '{}.csv'.format(now.strftime('%Y%W'))
 
-def update_stations_store(stations_df):
-    stations_df = stations_df[[
-        'id_eess_saldo',
-        'id_entidad',
-        'latitud',
-        'longitud',
-        'nombreEstacion',
-        'direccion',
-        'id_departamento'
-    ]]
-
-    stored_df = pd.read_csv('./stations.csv')
-    stored_df = pd.concat([stored_df, stations_df])
-
-    stored_df = stored_df[
-        ~stored_df['id_eess_saldo'].duplicated(keep='last')
-    ]
-    stored_df = stored_df.sort_values('id_eess_saldo')
-    stored_df.to_csv('./stations.csv', index=False)
+    snapshot.to_csv(
+        filename,
+        mode='a',
+        header=not filename.exists(),
+        index=False,
+    )
+    return filename
 
 
-def update_store(sal2_df, now):
-    fn = './data/{}.csv'.format(now.strftime('%Y%W'))
-
-    if not os.path.isfile(fn):
-        sal2_df.to_csv(fn)
-        return
-
-    stored_df = pd.read_csv(fn)
-    stored_df = pd.concat([
-        stored_df, sal2_df.reset_index()
-    ])
-
-    stored_df.to_csv(fn, index=False)
-
-
-###############################################################################
-# run
-###############################################################################
-
-if __name__ == '__main__':
+def main():
     print('[!] start')
 
-    stations_df = pd.read_csv('./stations.csv')
-    stations_df = pd.concat([
-        stations_df.assign(product_code=0),
-        stations_df.assign(product_code=1),
-        stations_df.assign(product_code=2),
-        stations_df.assign(product_code=3),
-    ], ignore_index=True)
-
-    # stations_df = update_station_list()
-    saldos = []
+    snapshot = download_snapshot()
+    now = snapshot['fecha_actualizacion'].iloc[0]
+    filename = update_store(snapshot, now)
 
     print(
-        '[*] updated station list: {} ({})'.format(
-            len(stations_df), stations_df['id_eess_saldo'].nunique()
+        '[*] downloaded: {} rows ({} stations)'.format(
+            len(snapshot), snapshot['id_eess'].nunique()
         )
     )
-
-    for cod_prod, stations_prod in stations_df.groupby('product_code'):
-        results = asyncio.run(
-            update_stations(cod_prod, stations_prod['id_eess_saldo'].values, max_concurrency=20)
-        )
-        saldos.extend(results)
-
-    sal2_df = pd.DataFrame([__ for _ in saldos if _ for __ in _])
-
-    print('[*] updated sal2: {} ({})'.format(len(sal2_df), sal2_df['id_eess'].nunique()))
-
-    now = pd.to_datetime('now', utc=True)
-    now = now.tz_convert("Etc/GMT+4").tz_localize(None).floor('s')
-
-    sal2_df['fecha_actualizacion'] = now
-
-    sal2_df = sal2_df.set_index(['fecha_actualizacion', 'id_eess', 'id_producto_bsa'])[[
-        'fecha_ultima_venta', 'saldo_octano', 'saldo_bsa', 'saldo_planta'
-    ]].sort_index()
-    sal2_df['fecha_ultima_venta'] = pd.to_datetime(
-        sal2_df['fecha_ultima_venta'].fillna('').str.rsplit('.', n=1).str[0]
-    )
-
-    update_store(sal2_df, now)
-    update_stations_store(stations_df)
-
+    print('[*] stored: {}'.format(filename.relative_to(ROOT_DIR)))
     print('[!] finish')
+
+
+if __name__ == '__main__':
+    main()
