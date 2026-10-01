@@ -1,6 +1,6 @@
 name: bo-combustible
-title: Monitoreo y Saldos de Combustible en Estaciones de Servicio de Bolivia (ANH)
-description: Registro temporal y catálogo de disponibilidad de combustibles (Gasolina, Diésel, Gasolina Premium, Diésel ULS) en estaciones de servicio de Bolivia, monitoreado por la Agencia Nacional de Hidrocarburos (ANH).
+title: Monitoreo y Abastecimiento de Combustible en Bolivia (ANH / YPFB)
+description: Registro temporal, logística de distribución y catálogo de disponibilidad de combustibles (Gasolina, Diésel, Gasolina Premium, Diésel ULS) en Bolivia, integrando inventarios de estaciones (ANH) y despachos mayoristas de cisternas (YPFB).
 resources:
   - name: saldos_abastecimiento
     title: Saldos y Monitoreo Continuo (Portal Abastecimiento ANH)
@@ -64,6 +64,177 @@ resources:
         - name: lng
           type: number
           description: Longitud geográfica en coordenadas WGS84
+
+  - name: ypfb_despachos
+    title: Despachos Efectivos de Cisternas (Sistema de Monitoreo YPFB)
+    type: table
+    path: data_ypfb/despachos/*.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    description: Despachos mayoristas de cisternas desde plantas de almacenaje de YPFB hacia estaciones de servicio y clientes directos.
+    schema:
+      fields:
+        - name: fecha_captura
+          type: datetime
+          description: Marca temporal de captura del snapshot (UTC-4)
+        - name: fecha_datos
+          type: date
+          description: Fecha operativa a la que corresponden los despachos (YYYY-MM-DD)
+        - name: distrito_id
+          type: integer
+          description: Identificador numérico del distrito comercial YPFB
+        - name: distrito_codigo
+          type: string
+          description: Sigla o código del distrito comercial (ej. AMZ, LPZ, SCZ)
+        - name: distrito_nombre
+          type: string
+          description: Nombre descriptivo del distrito comercial
+        - name: producto_general
+          type: string
+          description: Familia general del combustible (Diesel o Gasolina)
+        - name: producto_despachado
+          type: string
+          description: Denominación comercial exacta del producto despachado
+        - name: familia
+          type: string
+          description: Subtipo o familia técnica del carburante
+        - name: familia_codigo
+          type: string
+          description: Identificador codificado de familia
+        - name: cliente
+          type: string
+          description: Nombre de la estación de servicio o cliente destinatario
+        - name: estacion
+          type: string
+          description: Nombre estandarizado de la estación receptora
+        - name: placa_despacho
+          type: string
+          description: Placa de control del camión cisterna
+        - name: cantidad_despachada
+          type: number
+          description: Volumen despachado efectivamente en litros
+        - name: unidad
+          type: string
+          description: Unidad de medida de volumen (L)
+        - name: fecha_despacho_programado
+          type: date
+          description: Fecha programada inicialmente para el despacho
+        - name: fecha_despacho_efectivo
+          type: date
+          description: Fecha en que se ejecutó el despacho en planta
+        - name: fecha_despacho_efectivo_hora
+          type: datetime
+          description: Fecha y hora exacta con zona horaria del despacho en planta
+        - name: despacho_confirmado
+          type: boolean
+          description: Confirmación oficial de salida de planta por sistema SIGOPER / ESTIGIA
+        - name: fecha_despacho_difiere_de_programado
+          type: boolean
+          description: Indicador de reprogramación o desfase temporal
+        - name: ambito
+          type: string
+          description: Clasificación de destino (Ciudad o Provincia)
+        - name: grupo
+          type: string
+          description: Agrupación geográfica u operativa secundaria
+        - name: gps
+          type: boolean
+          description: Indica si la cisterna cuenta con dispositivo telemático de posicionamiento GPS
+
+  - name: ypfb_programacion
+    title: Programación y Nominaciones de Combustible (YPFB)
+    type: table
+    path: data_ypfb/programacion/*.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    description: Cuotas y volúmenes nominados programados para entrega por estación de servicio y estado de cumplimiento.
+    schema:
+      fields:
+        - name: fecha_captura
+          type: datetime
+          description: Marca temporal de captura del snapshot (UTC-4)
+        - name: fecha_datos
+          type: date
+          description: Fecha operativa de la programación (YYYY-MM-DD)
+        - name: distrito_id
+          type: integer
+          description: ID del distrito comercial YPFB
+        - name: distrito_codigo
+          type: string
+          description: Código del distrito comercial
+        - name: distrito_nombre
+          type: string
+          description: Nombre del distrito comercial
+        - name: producto_general
+          type: string
+          description: Familia de producto (Diesel o Gasolina)
+        - name: producto
+          type: string
+          description: Nombre del producto programado
+        - name: familia
+          type: string
+          description: Familia técnica del combustible
+        - name: familia_codigo
+          type: string
+          description: Código de familia
+        - name: cliente
+          type: string
+          description: Estación de servicio nominada
+        - name: volumen_programado
+          type: number
+          description: Volumen asignado en litros
+        - name: canal
+          type: string
+          description: Canal de distribución (ej. VENTAS)
+        - name: grupo
+          type: string
+          description: Grupo o subregión
+        - name: atendida
+          type: boolean
+          description: Indicador de cumplimiento (true si la estación ya recibió el volumen asignado)
+
+  - name: ypfb_resumen
+    title: Resumen Operativo Distrital (YPFB)
+    type: table
+    path: data_ypfb/resumen/*.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    description: Consolidado agregado por distrito comercial de volúmenes programados, despachados y pendientes.
+    schema:
+      fields:
+        - name: fecha_captura
+          type: datetime
+          description: Marca temporal de captura del snapshot (UTC-4)
+        - name: fecha_datos
+          type: date
+          description: Fecha operativa (YYYY-MM-DD)
+        - name: distrito_id
+          type: integer
+          description: ID del distrito comercial YPFB
+        - name: distrito_codigo
+          type: string
+          description: Código del distrito comercial
+        - name: distrito_nombre
+          type: string
+          description: Nombre del distrito comercial
+        - name: producto_general
+          type: string
+          description: Familia de combustible (Diesel o Gasolina)
+        - name: litros_programados
+          type: number
+          description: Total de litros programados para entrega en el distrito
+        - name: litros_despachados
+          type: number
+          description: Total de litros despachados en cisternas en el distrito
+        - name: litros_pendientes_confirmacion
+          type: number
+          description: Volumen en tránsito o pendiente de confirmación física
 
   - name: saldos_discretos
     title: Saldos Cualitativos Discretos (v2 API Móvil ANH)
