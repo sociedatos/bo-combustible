@@ -32,6 +32,7 @@ jobs:
         id: run_update_script
         run: |
           python update/update.py
+          python update/update_abastecimiento.py --update-stations
       - name: git status
         id: git-status
         run: |
