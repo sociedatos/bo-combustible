@@ -5,7 +5,7 @@ resources:
   - name: saldos_abastecimiento
     title: Saldos y Monitoreo Continuo (Portal Abastecimiento ANH)
     type: table
-    path: data_abastecimiento/*.csv
+    path: ../data_abastecimiento/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -68,7 +68,7 @@ resources:
   - name: ypfb_despachos
     title: Despachos Efectivos de Cisternas (Sistema de Monitoreo YPFB)
     type: table
-    path: data_ypfb/despachos/*.csv
+    path: ../data_ypfb/despachos/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -146,7 +146,7 @@ resources:
   - name: ypfb_programacion
     title: Programación y Nominaciones de Combustible (YPFB)
     type: table
-    path: data_ypfb/programacion/*.csv
+    path: ../data_ypfb/programacion/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -200,7 +200,7 @@ resources:
   - name: ypfb_resumen
     title: Resumen Operativo Distrital (YPFB)
     type: table
-    path: data_ypfb/resumen/*.csv
+    path: ../data_ypfb/resumen/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -239,7 +239,7 @@ resources:
   - name: saldos_discretos
     title: Saldos Cualitativos Discretos (v2 API Móvil ANH)
     type: table
-    path: data_discrete/*.csv
+    path: ../data_discrete/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -278,7 +278,7 @@ resources:
   - name: saldos_historicos
     title: Saldos Históricos Continuos (v1 API Móvil ANH)
     type: table
-    path: data/*.csv
+    path: ../data/*.csv
     scheme: file
     format: csv
     mediatype: text/csv
@@ -308,7 +308,7 @@ resources:
   - name: estaciones
     title: Catálogo Maestro de Estaciones de Servicio
     type: table
-    path: stations.csv
+    path: ../stations.csv
     scheme: file
     format: csv
     mediatype: text/csv
