@@ -1,0 +1,15 @@
+fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_general,litros_programados,litros_despachados,litros_pendientes_confirmacion
+2026-10-05 05:15:14,2026-10-05,10,COB,Cobija,Diesel,0.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,10,COB,Cobija,Gasolina,15000.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,19,CEN,Cochabamba,Diesel,1040000.0,0.0,3500.0
+2026-10-05 05:15:14,2026-10-05,19,CEN,Cochabamba,Gasolina,1049000.0,0.0,3500.0
+2026-10-05 05:15:14,2026-10-05,5,LPZ,Distrito Comercial La Paz,Diesel,0.0,0.0,103600.0
+2026-10-05 05:15:14,2026-10-05,5,LPZ,Distrito Comercial La Paz,Gasolina,100000.0,0.0,103600.0
+2026-10-05 05:15:14,2026-10-05,22,POT,Potosi,Diesel,0.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,22,POT,Potosi,Gasolina,50000.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,4,SCZ,Santa Cruz,Diesel,0.0,0.0,84500.0
+2026-10-05 05:15:14,2026-10-05,4,SCZ,Santa Cruz,Gasolina,0.0,0.0,84500.0
+2026-10-05 05:15:14,2026-10-05,24,TUP,Tupiza,Diesel,0.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,24,TUP,Tupiza,Gasolina,0.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,23,UYU,Uyuni,Diesel,0.0,0.0,0.0
+2026-10-05 05:15:14,2026-10-05,23,UYU,Uyuni,Gasolina,0.0,0.0,0.0
