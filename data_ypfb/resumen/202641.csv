@@ -1,0 +1,23 @@
+fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_general,litros_programados,litros_despachados,litros_pendientes_confirmacion
+2026-10-12 05:23:34,2026-10-12,20,CHU,Chuquisaca,Diesel,24000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,20,CHU,Chuquisaca,Gasolina,12000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,10,COB,Cobija,Diesel,0.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,10,COB,Cobija,Gasolina,0.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,19,CEN,Cochabamba,Diesel,1134000.0,0.0,41500.0
+2026-10-12 05:23:34,2026-10-12,19,CEN,Cochabamba,Gasolina,1023000.0,0.0,41500.0
+2026-10-12 05:23:34,2026-10-12,5,LPZ,Distrito Comercial La Paz,Diesel,1648000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,5,LPZ,Distrito Comercial La Paz,Gasolina,1980500.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,12,GUA,Guayaramerin,Diesel,0.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,12,GUA,Guayaramerin,Gasolina,24000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,9,ORU,Oruro,Diesel,123000.0,0.0,48000.0
+2026-10-12 05:23:34,2026-10-12,9,ORU,Oruro,Gasolina,140000.0,0.0,48000.0
+2026-10-12 05:23:34,2026-10-12,22,POT,Potosi,Diesel,150000.0,0.0,55500.0
+2026-10-12 05:23:34,2026-10-12,22,POT,Potosi,Gasolina,205000.0,0.0,55500.0
+2026-10-12 05:23:34,2026-10-12,4,SCZ,Santa Cruz,Diesel,2655500.0,0.0,226000.0
+2026-10-12 05:23:34,2026-10-12,4,SCZ,Santa Cruz,Gasolina,2709500.0,0.0,226000.0
+2026-10-12 05:23:34,2026-10-12,14,TAR,Tarija,Diesel,121000.0,0.0,2000.0
+2026-10-12 05:23:34,2026-10-12,14,TAR,Tarija,Gasolina,165000.0,0.0,2000.0
+2026-10-12 05:23:34,2026-10-12,15,YAC,Yacuiba,Diesel,82000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,15,YAC,Yacuiba,Gasolina,49000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,7,CAM,Zona Comercial Camiri,Diesel,35000.0,0.0,0.0
+2026-10-12 05:23:34,2026-10-12,7,CAM,Zona Comercial Camiri,Gasolina,28000.0,0.0,0.0
