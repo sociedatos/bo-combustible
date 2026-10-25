@@ -261,43 +261,43 @@ fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_g
 2026-10-24 21:18:03,2026-10-24,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,60000.0,42000.0,0.0
 2026-10-24 21:18:03,2026-10-24,8,SJC,Zona Comercial San Jose de Chiquitos,Diesel,245000.0,80000.0,0.0
 2026-10-24 21:18:03,2026-10-24,8,SJC,Zona Comercial San Jose de Chiquitos,Gasolina,145000.0,40000.0,0.0
-2026-10-25 02:19:49,2026-10-25,11,AMZ,Amazonico,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,11,AMZ,Amazonico,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,17,BER,Bermejo,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,17,BER,Bermejo,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,20,CHU,Chuquisaca,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,20,CHU,Chuquisaca,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,10,COB,Cobija,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,10,COB,Cobija,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,19,CEN,Cochabamba,Diesel,740000.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,19,CEN,Cochabamba,Gasolina,12000.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,5,LPZ,Distrito Comercial La Paz,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,5,LPZ,Distrito Comercial La Paz,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,12,GUA,Guayaramerin,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,12,GUA,Guayaramerin,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,9,ORU,Oruro,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,9,ORU,Oruro,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,22,POT,Potosi,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,22,POT,Potosi,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,26,PVR,Puerto Villarroel,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,26,PVR,Puerto Villarroel,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,4,SCZ,Santa Cruz,Diesel,20000.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,4,SCZ,Santa Cruz,Gasolina,20000.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,14,TAR,Tarija,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,14,TAR,Tarija,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,13,TRI,Trinidad,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,13,TRI,Trinidad,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,24,TUP,Tupiza,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,24,TUP,Tupiza,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,23,UYU,Uyuni,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,23,UYU,Uyuni,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,18,VLM,Villamontes,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,18,VLM,Villamontes,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,16,VLZ,Villazon,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,16,VLZ,Villazon,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,15,YAC,Yacuiba,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,15,YAC,Yacuiba,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,6,PSZ,Zona Comercial Puerto Suarez,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,8,SJC,Zona Comercial San Jose de Chiquitos,Diesel,0.0,0.0,0.0
-2026-10-25 02:19:49,2026-10-25,8,SJC,Zona Comercial San Jose de Chiquitos,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,11,AMZ,Amazonico,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,11,AMZ,Amazonico,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,17,BER,Bermejo,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,17,BER,Bermejo,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,20,CHU,Chuquisaca,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,20,CHU,Chuquisaca,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,10,COB,Cobija,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,10,COB,Cobija,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,19,CEN,Cochabamba,Diesel,740000.0,206000.0,0.0
+2026-10-25 08:39:21,2026-10-25,19,CEN,Cochabamba,Gasolina,12000.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,5,LPZ,Distrito Comercial La Paz,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,5,LPZ,Distrito Comercial La Paz,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,12,GUA,Guayaramerin,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,12,GUA,Guayaramerin,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,9,ORU,Oruro,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,9,ORU,Oruro,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,22,POT,Potosi,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,22,POT,Potosi,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,26,PVR,Puerto Villarroel,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,26,PVR,Puerto Villarroel,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,4,SCZ,Santa Cruz,Diesel,20000.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,4,SCZ,Santa Cruz,Gasolina,20000.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,14,TAR,Tarija,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,14,TAR,Tarija,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,13,TRI,Trinidad,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,13,TRI,Trinidad,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,24,TUP,Tupiza,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,24,TUP,Tupiza,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,23,UYU,Uyuni,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,23,UYU,Uyuni,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,18,VLM,Villamontes,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,18,VLM,Villamontes,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,16,VLZ,Villazon,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,16,VLZ,Villazon,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,15,YAC,Yacuiba,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,15,YAC,Yacuiba,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,6,PSZ,Zona Comercial Puerto Suarez,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,8,SJC,Zona Comercial San Jose de Chiquitos,Diesel,0.0,0.0,0.0
+2026-10-25 08:39:21,2026-10-25,8,SJC,Zona Comercial San Jose de Chiquitos,Gasolina,0.0,0.0,0.0
