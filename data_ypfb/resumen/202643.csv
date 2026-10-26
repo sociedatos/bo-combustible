@@ -1,0 +1,19 @@
+fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_general,litros_programados,litros_despachados,litros_pendientes_confirmacion
+2026-10-26 02:29:40,2026-10-26,19,CEN,Cochabamba,Diesel,1137000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,19,CEN,Cochabamba,Gasolina,1003000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,5,LPZ,Distrito Comercial La Paz,Diesel,1793000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,5,LPZ,Distrito Comercial La Paz,Gasolina,1718000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,9,ORU,Oruro,Diesel,88000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,9,ORU,Oruro,Gasolina,150000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,22,POT,Potosi,Diesel,25000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,22,POT,Potosi,Gasolina,75000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,4,SCZ,Santa Cruz,Diesel,2649500.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,4,SCZ,Santa Cruz,Gasolina,2675500.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,14,TAR,Tarija,Diesel,107000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,14,TAR,Tarija,Gasolina,147000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,13,TRI,Trinidad,Diesel,0.0,12000.0,0.0
+2026-10-26 02:29:40,2026-10-26,13,TRI,Trinidad,Gasolina,0.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,18,VLM,Villamontes,Diesel,53000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,18,VLM,Villamontes,Gasolina,27000.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,6,PSZ,Zona Comercial Puerto Suarez,Diesel,0.0,0.0,0.0
+2026-10-26 02:29:40,2026-10-26,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,12500.0,0.0,0.0
