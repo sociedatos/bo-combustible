@@ -131,3 +131,43 @@ fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_g
 2026-10-28 19:20:30,2026-10-28,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,50000.0,0.0,0.0
 2026-10-28 19:20:30,2026-10-28,8,SJC,Zona Comercial San Jose de Chiquitos,Diesel,175000.0,55000.0,0.0
 2026-10-28 19:20:30,2026-10-28,8,SJC,Zona Comercial San Jose de Chiquitos,Gasolina,54000.0,18000.0,0.0
+2026-10-29 01:59:33,2026-10-29,11,AMZ,Amazonico,Diesel,112000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,11,AMZ,Amazonico,Gasolina,103000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,20,CHU,Chuquisaca,Diesel,196000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,20,CHU,Chuquisaca,Gasolina,289000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,10,COB,Cobija,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,10,COB,Cobija,Gasolina,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,19,CEN,Cochabamba,Diesel,1194000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,19,CEN,Cochabamba,Gasolina,1195000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,5,LPZ,Distrito Comercial La Paz,Diesel,1747500.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,5,LPZ,Distrito Comercial La Paz,Gasolina,1938000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,12,GUA,Guayaramerin,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,12,GUA,Guayaramerin,Gasolina,12000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,9,ORU,Oruro,Diesel,76000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,9,ORU,Oruro,Gasolina,150000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,22,POT,Potosi,Diesel,20000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,22,POT,Potosi,Gasolina,112000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,26,PVR,Puerto Villarroel,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,26,PVR,Puerto Villarroel,Gasolina,3000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,4,SCZ,Santa Cruz,Diesel,87900.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,4,SCZ,Santa Cruz,Gasolina,69500.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,14,TAR,Tarija,Diesel,145000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,14,TAR,Tarija,Gasolina,177000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,13,TRI,Trinidad,Diesel,30000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,13,TRI,Trinidad,Gasolina,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,24,TUP,Tupiza,Diesel,10000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,24,TUP,Tupiza,Gasolina,10000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,23,UYU,Uyuni,Diesel,95000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,23,UYU,Uyuni,Gasolina,85000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,18,VLM,Villamontes,Diesel,30000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,18,VLM,Villamontes,Gasolina,15000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,16,VLZ,Villazon,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,16,VLZ,Villazon,Gasolina,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,15,YAC,Yacuiba,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,15,YAC,Yacuiba,Gasolina,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,7,CAM,Zona Comercial Camiri,Diesel,38000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,7,CAM,Zona Comercial Camiri,Gasolina,40000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,6,PSZ,Zona Comercial Puerto Suarez,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,65000.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,8,SJC,Zona Comercial San Jose de Chiquitos,Diesel,0.0,0.0,0.0
+2026-10-29 01:59:33,2026-10-29,8,SJC,Zona Comercial San Jose de Chiquitos,Gasolina,0.0,0.0,0.0
