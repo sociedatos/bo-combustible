@@ -1,21 +1,29 @@
 fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_general,litros_programados,litros_despachados,litros_pendientes_confirmacion
-2026-11-02 02:23:59,2026-11-02,10,COB,Cobija,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,10,COB,Cobija,Gasolina,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,19,CEN,Cochabamba,Diesel,1028000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,19,CEN,Cochabamba,Gasolina,1003000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,5,LPZ,Distrito Comercial La Paz,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,5,LPZ,Distrito Comercial La Paz,Gasolina,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,9,ORU,Oruro,Diesel,442000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,9,ORU,Oruro,Gasolina,451500.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,22,POT,Potosi,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,22,POT,Potosi,Gasolina,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,4,SCZ,Santa Cruz,Diesel,40000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,4,SCZ,Santa Cruz,Gasolina,1775000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,14,TAR,Tarija,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,14,TAR,Tarija,Gasolina,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,24,TUP,Tupiza,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,24,TUP,Tupiza,Gasolina,10000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,16,VLZ,Villazon,Diesel,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,16,VLZ,Villazon,Gasolina,0.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,7,CAM,Zona Comercial Camiri,Diesel,7000.0,0.0,0.0
-2026-11-02 02:23:59,2026-11-02,7,CAM,Zona Comercial Camiri,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,17,BER,Bermejo,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,17,BER,Bermejo,Gasolina,8000.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,10,COB,Cobija,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,10,COB,Cobija,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,19,CEN,Cochabamba,Diesel,1028000.0,371000.0,0.0
+2026-11-02 13:13:11,2026-11-02,19,CEN,Cochabamba,Gasolina,1007000.0,566000.0,0.0
+2026-11-02 13:13:11,2026-11-02,5,LPZ,Distrito Comercial La Paz,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,5,LPZ,Distrito Comercial La Paz,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,12,GUA,Guayaramerin,Diesel,16000.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,12,GUA,Guayaramerin,Gasolina,36000.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,9,ORU,Oruro,Diesel,442000.0,61500.0,0.0
+2026-11-02 13:13:11,2026-11-02,9,ORU,Oruro,Gasolina,451500.0,145000.0,0.0
+2026-11-02 13:13:11,2026-11-02,22,POT,Potosi,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,22,POT,Potosi,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,26,PVR,Puerto Villarroel,Diesel,120000.0,25500.0,0.0
+2026-11-02 13:13:11,2026-11-02,26,PVR,Puerto Villarroel,Gasolina,211200.0,49200.0,0.0
+2026-11-02 13:13:11,2026-11-02,4,SCZ,Santa Cruz,Diesel,60000.0,65000.0,0.0
+2026-11-02 13:13:11,2026-11-02,4,SCZ,Santa Cruz,Gasolina,1895000.0,590000.0,0.0
+2026-11-02 13:13:11,2026-11-02,14,TAR,Tarija,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,14,TAR,Tarija,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,24,TUP,Tupiza,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,24,TUP,Tupiza,Gasolina,34000.0,22000.0,0.0
+2026-11-02 13:13:11,2026-11-02,16,VLZ,Villazon,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,16,VLZ,Villazon,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,7,CAM,Zona Comercial Camiri,Diesel,7000.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,7,CAM,Zona Comercial Camiri,Gasolina,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,6,PSZ,Zona Comercial Puerto Suarez,Diesel,0.0,0.0,0.0
+2026-11-02 13:13:11,2026-11-02,6,PSZ,Zona Comercial Puerto Suarez,Gasolina,25000.0,0.0,0.0
