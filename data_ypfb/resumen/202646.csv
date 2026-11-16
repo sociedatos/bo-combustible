@@ -1,0 +1,27 @@
+fecha_captura,fecha_datos,distrito_id,distrito_codigo,distrito_nombre,producto_general,litros_programados,litros_despachados,litros_pendientes_confirmacion
+2026-11-16 07:42:17,2026-11-16,20,CHU,Chuquisaca,Diesel,12000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,20,CHU,Chuquisaca,Gasolina,280600.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,10,COB,Cobija,Diesel,20000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,10,COB,Cobija,Gasolina,34000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,19,CEN,Cochabamba,Diesel,1044000.0,24000.0,0.0
+2026-11-16 07:42:17,2026-11-16,19,CEN,Cochabamba,Gasolina,1024000.0,10000.0,0.0
+2026-11-16 07:42:17,2026-11-16,5,LPZ,Distrito Comercial La Paz,Diesel,1624000.0,24000.0,0.0
+2026-11-16 07:42:17,2026-11-16,5,LPZ,Distrito Comercial La Paz,Gasolina,1940000.0,18000.0,0.0
+2026-11-16 07:42:17,2026-11-16,9,ORU,Oruro,Diesel,31500.0,7000.0,0.0
+2026-11-16 07:42:17,2026-11-16,9,ORU,Oruro,Gasolina,110000.0,60500.0,0.0
+2026-11-16 07:42:17,2026-11-16,22,POT,Potosi,Diesel,0.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,22,POT,Potosi,Gasolina,112500.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,26,PVR,Puerto Villarroel,Diesel,32000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,26,PVR,Puerto Villarroel,Gasolina,54000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,4,SCZ,Santa Cruz,Diesel,2709000.0,30000.0,0.0
+2026-11-16 07:42:17,2026-11-16,4,SCZ,Santa Cruz,Gasolina,2485000.0,130000.0,0.0
+2026-11-16 07:42:17,2026-11-16,14,TAR,Tarija,Diesel,129500.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,14,TAR,Tarija,Gasolina,174000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,13,TRI,Trinidad,Diesel,15000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,13,TRI,Trinidad,Gasolina,5000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,18,VLM,Villamontes,Diesel,23000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,18,VLM,Villamontes,Gasolina,27000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,16,VLZ,Villazon,Diesel,73000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,16,VLZ,Villazon,Gasolina,29000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,15,YAC,Yacuiba,Diesel,81000.0,0.0,0.0
+2026-11-16 07:42:17,2026-11-16,15,YAC,Yacuiba,Gasolina,52000.0,0.0,0.0
